@@ -1,5 +1,6 @@
 How to Use the Script
    0. Donwload the script and make it executable with chmod +x
+   
    1. Navigate to your home directory or where the script is located.
    2. Run the script with the name of the package you want to install.
 
