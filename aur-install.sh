@@ -17,7 +17,7 @@ if [ -z "$1" ]; then
 fi
 
 PACKAGE_NAME="$1"
-CLONE_URL="https://aur.archlinux.org/$PACKAGE_NAME.git"
+CLONE_URL="https://github.com/archlinux/aur.git"
 
 # --- Main Logic ---
 
@@ -35,7 +35,7 @@ cd "$BUILD_DIR"
 
 # 1. Clone the repository
 echo "==> Cloning repository for '$PACKAGE_NAME'..."
-git clone "$CLONE_URL"
+git clone --single-branch --branch "$PACKAGE_NAME" "$CLONE_URL" "$PACKAGE_NAME"
 
 # 2. Change into the package directory
 cd "$PACKAGE_NAME"
